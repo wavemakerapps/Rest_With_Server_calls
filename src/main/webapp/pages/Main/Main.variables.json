@@ -1,0 +1,172 @@
+{
+  "admin" : {
+    "_id" : "wm-admin-wm.ServiceVariable-1515070069417",
+    "name" : "admin",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "origin",
+      "value" : "Toronto",
+      "type" : "string"
+    }, {
+      "target" : "destination",
+      "value" : "Montreal",
+      "type" : "string"
+    }, {
+      "target" : "sensor",
+      "value" : "false",
+      "type" : "string"
+    } ],
+    "type" : "admin.RootResponse",
+    "service" : "admin",
+    "operation" : "invoke",
+    "operationId" : "admin_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "authenticated" : {
+    "_id" : "wm-authenticated-wm.ServiceVariable-1515070081840",
+    "name" : "authenticated",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "origin",
+      "value" : "Toronto",
+      "type" : "string"
+    }, {
+      "target" : "destination",
+      "value" : "Montreal",
+      "type" : "string"
+    }, {
+      "target" : "sensor",
+      "value" : "false",
+      "type" : "string"
+    } ],
+    "type" : "authenticated.RootResponse",
+    "service" : "authenticated",
+    "operation" : "invoke",
+    "operationId" : "authenticated_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "everyone" : {
+    "_id" : "wm-everyone-wm.ServiceVariable-1515070091094",
+    "name" : "everyone",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "origin",
+      "value" : "Toronto",
+      "type" : "string"
+    }, {
+      "target" : "destination",
+      "value" : "Montreal",
+      "type" : "string"
+    }, {
+      "target" : "sensor",
+      "value" : "false",
+      "type" : "string"
+    } ],
+    "type" : "everyone.RootResponse",
+    "service" : "everyone",
+    "operation" : "invoke",
+    "operationId" : "everyone_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "user" : {
+    "_id" : "wm-user-wm.ServiceVariable-1515070100318",
+    "name" : "user",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "origin",
+      "value" : "Toronto",
+      "type" : "string"
+    }, {
+      "target" : "destination",
+      "value" : "Montreal",
+      "type" : "string"
+    }, {
+      "target" : "sensor",
+      "value" : "false",
+      "type" : "string"
+    } ],
+    "type" : "user.RootResponse",
+    "service" : "user",
+    "operation" : "invoke",
+    "operationId" : "user_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  },
+  "useradmin" : {
+    "_id" : "wm-useradmin-wm.ServiceVariable-1515070110751",
+    "name" : "useradmin",
+    "owner" : "Page",
+    "category" : "wm.ServiceVariable",
+    "dataBinding" : [ {
+      "target" : "origin",
+      "value" : "Toronto",
+      "type" : "string"
+    }, {
+      "target" : "destination",
+      "value" : "Montreal",
+      "type" : "string"
+    }, {
+      "target" : "sensor",
+      "value" : "false",
+      "type" : "string"
+    } ],
+    "type" : "useradmin.RootResponse",
+    "service" : "useradmin",
+    "operation" : "invoke",
+    "operationId" : "useradmin_RestServiceVirtualController-invoke",
+    "operationType" : "get",
+    "serviceType" : "RestService",
+    "dataSet" : [ ],
+    "isList" : false,
+    "maxResults" : 20,
+    "startUpdate" : true,
+    "autoUpdate" : true,
+    "inFlightBehavior" : "executeLast",
+    "transformationRequired" : false,
+    "saveInPhonegap" : false,
+    "controller" : "RestServiceVirtual"
+  }
+}

@@ -1,0 +1,61 @@
+[ {
+  "urlPattern" : "/pages/footer/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/header/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/leftnav/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/Login/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/Main/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/rightnav/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/pages/topnav/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/**",
+  "permission" : "Authenticated",
+  "roles" : null,
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/services/admin/invoke/api/directions/xml/**",
+  "permission" : "Role",
+  "roles" : [ "admin" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/services/everyone/invoke/api/directions/xml/**",
+  "permission" : "PermitAll",
+  "roles" : [ ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/services/user/invoke/api/directions/xml/**",
+  "permission" : "Role",
+  "roles" : [ "user" ],
+  "httpMethod" : null
+}, {
+  "urlPattern" : "/services/useradmin/invoke/api/directions/xml/**",
+  "permission" : "Role",
+  "roles" : [ "admin", "user" ],
+  "httpMethod" : null
+} ]
