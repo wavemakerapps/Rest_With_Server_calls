@@ -1,0 +1,54 @@
+<jaxb:bindings jaxb:version="2.1"
+               xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+               xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <jaxb:bindings schemaLocation="ConnectPoint.Reservation_5.xsd" node="//xs:schema[@targetNamespace='http://schemas.microsoft.com/2003/10/Serialization/Arrays']">
+            <jaxb:schemaBindings>
+                <jaxb:package name="com.gzipcompressiontest.services.connectpoint_reservation.model.microsoft"/>
+            </jaxb:schemaBindings>
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="ConnectPoint.Reservation.xsd" node="//xs:schema[@targetNamespace='http://tempuri.org/']">
+            <jaxb:schemaBindings>
+                <jaxb:package name="com.gzipcompressiontest.services.connectpoint_reservation.model.tempuri"/>
+            </jaxb:schemaBindings>
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="ConnectPoint.Reservation_4.xsd" node="//xs:schema[@targetNamespace='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request']">
+            <jaxb:schemaBindings>
+                <jaxb:package name="com.gzipcompressiontest.services.connectpoint_reservation.model.datacontract"/>
+            </jaxb:schemaBindings>
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="ConnectPoint.Reservation_2.xsd" node="//xs:schema[@targetNamespace='http://schemas.datacontract.org/2004/07/Radixx.Reservation']">
+            <jaxb:schemaBindings>
+                <jaxb:package name="com.gzipcompressiontest.services.connectpoint_reservation.model.datacontract1"/>
+            </jaxb:schemaBindings>
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="ConnectPoint.Reservation_1.xsd" node="//xs:schema[@targetNamespace='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request']">
+            <jaxb:schemaBindings>
+                <jaxb:package name="com.gzipcompressiontest.services.connectpoint_reservation.model.datacontract2"/>
+            </jaxb:schemaBindings>
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="ConnectPoint.Reservation_3.xsd" node="//xs:schema[@targetNamespace='http://schemas.microsoft.com/2003/10/Serialization/']">
+            <jaxb:schemaBindings>
+                <jaxb:package name="com.gzipcompressiontest.services.connectpoint_reservation.model.microsoft1"/>
+            </jaxb:schemaBindings>
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="ConnectPoint.Reservation_6.xsd" node="//xs:schema[@targetNamespace='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response']">
+            <jaxb:schemaBindings>
+                <jaxb:package name="com.gzipcompressiontest.services.connectpoint_reservation.model.datacontract3"/>
+            </jaxb:schemaBindings>
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="ConnectPoint.Reservation_8.xsd" node="//xs:schema[@targetNamespace='http://schemas.datacontract.org/2004/07/FZ.BusinessLayer.Reservation.Requests']">
+            <jaxb:schemaBindings>
+                <jaxb:package name="com.gzipcompressiontest.services.connectpoint_reservation.model.datacontract4"/>
+            </jaxb:schemaBindings>
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="ConnectPoint.Reservation_7.xsd" node="//xs:schema[@targetNamespace='http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions']">
+            <jaxb:schemaBindings>
+                <jaxb:package name="com.gzipcompressiontest.services.connectpoint_reservation.model.datacontract5"/>
+            </jaxb:schemaBindings>
+    </jaxb:bindings>
+    <jaxb:bindings schemaLocation="ConnectPoint.Reservation_9.xsd" node="//xs:schema[@targetNamespace='http://schemas.datacontract.org/2004/07/FZ.BusinessLayer.Reservation.Responses']">
+            <jaxb:schemaBindings>
+                <jaxb:package name="com.gzipcompressiontest.services.connectpoint_reservation.model.datacontract6"/>
+            </jaxb:schemaBindings>
+    </jaxb:bindings>
+</jaxb:bindings>

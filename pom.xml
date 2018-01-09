@@ -13,6 +13,13 @@
             </resource>
             <resource>
                 <filtering>true</filtering>
+                <directory>services/ConnectPoint_Reservation/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
                 <directory>services/admin/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
@@ -28,6 +35,13 @@
             <resource>
                 <filtering>true</filtering>
                 <directory>services/everyone/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/hrdb/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
                 </excludes>
@@ -131,9 +145,11 @@
                         </goals>
                         <configuration>
                             <sources>
+                                <source>services/ConnectPoint_Reservation/src</source>
                                 <source>services/admin/src</source>
                                 <source>services/authenticated/src</source>
                                 <source>services/everyone/src</source>
+                                <source>services/hrdb/src</source>
                                 <source>services/securityService/src</source>
                                 <source>services/user/src</source>
                                 <source>services/useradmin/src</source>
@@ -341,6 +357,6 @@
         <profile.props.file>development.properties</profile.props.file>
         <spring.version>4.3.9.RELEASE</spring.version>
         <spring.security.version>4.1.2.RELEASE</spring.security.version>
-        <wavemaker.studio.version>9.9.9.4052</wavemaker.studio.version>
+        <wavemaker.studio.version>9.9.9.4055</wavemaker.studio.version>
     </properties>
 </project>

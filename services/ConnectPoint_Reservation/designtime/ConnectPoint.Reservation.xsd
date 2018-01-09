@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/">
+  <xs:import schemaLocation="ConnectPoint.Reservation_1.xsd" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+  <xs:import schemaLocation="ConnectPoint.Reservation_6.xsd" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+  <xs:import schemaLocation="ConnectPoint.Reservation_8.xsd" namespace="http://schemas.datacontract.org/2004/07/FZ.BusinessLayer.Reservation.Requests"/>
+  <xs:import schemaLocation="ConnectPoint.Reservation_9.xsd" namespace="http://schemas.datacontract.org/2004/07/FZ.BusinessLayer.Reservation.Responses"/>
+  <xs:element name="CreatePNR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreatePnrRequest" nillable="true" type="q1:CreatePNR" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePNRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreatePNRResult" nillable="true" type="q2:ViewPNR" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePNRFFP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreatePnrRequest" nillable="true" type="q3:CreatePNR" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePNRFFPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreatePNRFFPResult" nillable="true" type="q4:ViewPNR" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SummaryPNR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SummaryPnrRequest" nillable="true" type="q5:SummaryPNR" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SummaryPNRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SummaryPNRResult" nillable="true" type="q6:ViewPNR" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyPNR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModifyPnrRequest" nillable="true" type="q7:ModifyPNR" xmlns:q7="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyPNRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModifyPNRResult" nillable="true" type="q8:ViewPNR" xmlns:q8="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelPNR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CancelPnrRequest" nillable="true" type="q9:CancelPNR" xmlns:q9="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelPNRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CancelPNRResult" nillable="true" type="q10:ViewPNR" xmlns:q10="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrievePNR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrievePnrRequest" nillable="true" type="q11:RetrievePNR" xmlns:q11="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrievePNRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrievePNRResult" nillable="true" type="q12:ViewPNR" xmlns:q12="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReservationBalance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrieveBalanceRequest" nillable="true" type="q13:RetrieveBalance" xmlns:q13="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReservationBalanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetReservationBalanceResult" nillable="true" type="q14:RetrieveBalanceResponse" xmlns:q14="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportPNR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImportPNRRequest" nillable="true" type="q15:ImportPNR" xmlns:q15="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ImportPNRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ImportPNRResult" nillable="true" type="q16:ViewImportPNR" xmlns:q16="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HistoryPNR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HistoryPNRRequest" nillable="true" type="q17:HistoryPNR" xmlns:q17="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HistoryPNRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HistoryPNRResult" nillable="true" type="q18:ViewHistoryPNRCollection" xmlns:q18="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EvaluateModificationOfPNR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EvaluateModificationOfPNRRequest" nillable="true" type="q19:EvaluateModificationOfPNR" xmlns:q19="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EvaluateModificationOfPNRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EvaluateModificationOfPNRResult" nillable="true" type="q20:ViewPNRModificationImpactCollection" xmlns:q20="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SummaryPNRExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SummaryPnrRequest" nillable="true" type="q21:SummaryPNR" xmlns:q21="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SummaryPNRExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SummaryPNRExtResult" nillable="true" type="q22:ViewPNR" xmlns:q22="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPenalties">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPenaltyRequest" nillable="true" type="q23:AddPenalty" xmlns:q23="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPenaltiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPenaltiesResult" nillable="true" type="q24:ViewPNR" xmlns:q24="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePNRExt">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreatePnrRequest" nillable="true" type="q25:CreatePNR" xmlns:q25="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreatePNRExtResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreatePNRExtResult" nillable="true" type="q26:ViewPNR" xmlns:q26="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTaxes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddTaxRequest" nillable="true" type="q27:AddTax" xmlns:q27="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddTaxesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddTaxesResult" nillable="true" type="q28:ViewPNR" xmlns:q28="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OverrideReservationCharges">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OverrideReservationChargesRequest" nillable="true" type="q29:OverrideReservationCharges" xmlns:q29="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OverrideReservationChargesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OverrideReservationChargesResult" nillable="true" type="q30:ViewPNR" xmlns:q30="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OverBook">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreatePnrRequest" nillable="true" type="q31:CreatePNR" xmlns:q31="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="OverBookResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OverBookResult" nillable="true" type="q32:ViewPNR" xmlns:q32="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApisInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SessionKey" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="SeriesNum" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="ConfirmationNum" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="OmitCancelled" type="xs:boolean"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApisInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetApisInfoResult" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetApisInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SessionKey" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="SeriesNum" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="ConfirmationNum" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="ApisInfoXML" nillable="true" type="xs:string"/>
+        <xs:element minOccurs="0" name="CheckinAgent" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetApisInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetApisInfoResult" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyPNRFFP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModifyPnrRequest" nillable="true" type="q33:ModifyPNR" xmlns:q33="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ModifyPNRFFPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ModifyPNRFFPResult" nillable="true" type="q34:ViewPNR" xmlns:q34="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelPNRFFP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CancelPnrRequest" nillable="true" type="q35:CancelPNR" xmlns:q35="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelPNRFFPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CancelPNRFFPResult" nillable="true" type="q36:ViewPNR" xmlns:q36="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReservation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RetrievePnrRequest" nillable="true" type="q37:RetrievePNR" xmlns:q37="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReservationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetReservationResult" nillable="true" type="q38:ViewPNR" xmlns:q38="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HoldInventory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="seatInventoryRequest" nillable="true" type="q39:SeatInventoryRequest" xmlns:q39="http://schemas.datacontract.org/2004/07/FZ.BusinessLayer.Reservation.Requests"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HoldInventoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HoldInventoryResult" nillable="true" type="q40:SeatInventoryResponse" xmlns:q40="http://schemas.datacontract.org/2004/07/FZ.BusinessLayer.Reservation.Responses"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseInventory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="seatInventoryRequest" nillable="true" type="q41:SeatInventoryRequest" xmlns:q41="http://schemas.datacontract.org/2004/07/FZ.BusinessLayer.Reservation.Requests"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseInventoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReleaseInventoryResult" nillable="true" type="q42:SeatInventoryResponse" xmlns:q42="http://schemas.datacontract.org/2004/07/FZ.BusinessLayer.Reservation.Responses"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelPNRFFPAllTaxes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CancelPnrRequest" nillable="true" type="q43:CancelPNR" xmlns:q43="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelPNRFFPAllTaxesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CancelPNRFFPAllTaxesResult" nillable="true" type="q44:ViewPNR" xmlns:q44="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelPNRFFPAutoCancel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CancelPnrRequest" nillable="true" type="q45:CancelPNR" xmlns:q45="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CancelPNRFFPAutoCancelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CancelPNRFFPAutoCancelResult" nillable="true" type="q46:ViewPNR" xmlns:q46="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

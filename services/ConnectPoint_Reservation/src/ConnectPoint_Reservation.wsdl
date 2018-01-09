@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="ConnectPoint_Reservation" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="ConnectPoint.Reservation.xsd" namespace="http://tempuri.org/"/>
+      <xsd:import schemaLocation="ConnectPoint.Reservation_3.xsd" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+      <xsd:import schemaLocation="ConnectPoint.Reservation_1.xsd" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Request"/>
+      <xsd:import schemaLocation="ConnectPoint.Reservation_4.xsd" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xsd:import schemaLocation="ConnectPoint.Reservation_2.xsd" namespace="http://schemas.datacontract.org/2004/07/Radixx.Reservation"/>
+      <xsd:import schemaLocation="ConnectPoint.Reservation_6.xsd" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response"/>
+      <xsd:import schemaLocation="ConnectPoint.Reservation_7.xsd" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+      <xsd:import schemaLocation="ConnectPoint.Reservation_5.xsd" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+      <xsd:import schemaLocation="ConnectPoint.Reservation_8.xsd" namespace="http://schemas.datacontract.org/2004/07/FZ.BusinessLayer.Reservation.Requests"/>
+      <xsd:import schemaLocation="ConnectPoint.Reservation_9.xsd" namespace="http://schemas.datacontract.org/2004/07/FZ.BusinessLayer.Reservation.Responses"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IConnectPoint_Reservation_CreatePNR_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePNR"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_CreatePNR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePNRResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_CreatePNRFFP_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePNRFFP"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_CreatePNRFFP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePNRFFPResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_SummaryPNR_InputMessage">
+    <wsdl:part name="parameters" element="tns:SummaryPNR"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_SummaryPNR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SummaryPNRResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_ModifyPNR_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyPNR"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_ModifyPNR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyPNRResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_CancelPNR_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelPNR"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_CancelPNR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelPNRResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_RetrievePNR_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePNR"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_RetrievePNR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrievePNRResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_GetReservationBalance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReservationBalance"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_GetReservationBalance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReservationBalanceResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_ImportPNR_InputMessage">
+    <wsdl:part name="parameters" element="tns:ImportPNR"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_ImportPNR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ImportPNRResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_HistoryPNR_InputMessage">
+    <wsdl:part name="parameters" element="tns:HistoryPNR"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_HistoryPNR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HistoryPNRResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_EvaluateModificationOfPNR_InputMessage">
+    <wsdl:part name="parameters" element="tns:EvaluateModificationOfPNR"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_EvaluateModificationOfPNR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EvaluateModificationOfPNRResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_SummaryPNRExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:SummaryPNRExt"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_SummaryPNRExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SummaryPNRExtResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_AddPenalties_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPenalties"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_AddPenalties_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPenaltiesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_CreatePNRExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePNRExt"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_CreatePNRExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreatePNRExtResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_AddTaxes_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTaxes"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_AddTaxes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTaxesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_OverrideReservationCharges_InputMessage">
+    <wsdl:part name="parameters" element="tns:OverrideReservationCharges"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_OverrideReservationCharges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OverrideReservationChargesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_OverBook_InputMessage">
+    <wsdl:part name="parameters" element="tns:OverBook"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_OverBook_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OverBookResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_GetApisInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApisInfo"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_GetApisInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApisInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_SetApisInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetApisInfo"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_SetApisInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetApisInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_ModifyPNRFFP_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyPNRFFP"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_ModifyPNRFFP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyPNRFFPResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_CancelPNRFFP_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelPNRFFP"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_CancelPNRFFP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelPNRFFPResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_GetReservation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReservation"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_GetReservation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReservationResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_HoldInventory_InputMessage">
+    <wsdl:part name="parameters" element="tns:HoldInventory"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_HoldInventory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HoldInventoryResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_ReleaseInventory_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReleaseInventory"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_ReleaseInventory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReleaseInventoryResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_CancelPNRFFPAllTaxes_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelPNRFFPAllTaxes"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_CancelPNRFFPAllTaxes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelPNRFFPAllTaxesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_CancelPNRFFPAutoCancel_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelPNRFFPAutoCancel"/>
+  </wsdl:message>
+  <wsdl:message name="IConnectPoint_Reservation_CancelPNRFFPAutoCancel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelPNRFFPAutoCancelResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="IConnectPoint_Reservation">
+    <wsdl:operation name="CreatePNR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/CreatePNR" message="tns:IConnectPoint_Reservation_CreatePNR_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/CreatePNRResponse" message="tns:IConnectPoint_Reservation_CreatePNR_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePNRFFP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/CreatePNRFFP" message="tns:IConnectPoint_Reservation_CreatePNRFFP_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/CreatePNRFFPResponse" message="tns:IConnectPoint_Reservation_CreatePNRFFP_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="SummaryPNR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/SummaryPNR" message="tns:IConnectPoint_Reservation_SummaryPNR_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/SummaryPNRResponse" message="tns:IConnectPoint_Reservation_SummaryPNR_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyPNR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/ModifyPNR" message="tns:IConnectPoint_Reservation_ModifyPNR_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/ModifyPNRResponse" message="tns:IConnectPoint_Reservation_ModifyPNR_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPNR">
+      <wsdl:documentation><![CDATA[<summary>
+  <para>CancelPNR allows for two actions to occur.</para>
+  <para>If action CancelReservation is specified in the request object submitted then the reservation that is associated with the session will be cancelled within
+ the Radxx System. The associated charges that are refundable will be refunded accordingly and any cancellation fees that maybe accessed will be applied</para>
+  <para>If ActionType RevertReservation is specified then this action will rollback any Presaved mofications that may have occured in the in memory object. The end
+ result will put the reservation back to the state that it was in upon initial call to RetrieveReservation.</para>
+ </summary>]]></wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/CancelPNR" message="tns:IConnectPoint_Reservation_CancelPNR_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/CancelPNRResponse" message="tns:IConnectPoint_Reservation_CancelPNR_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePNR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/RetrievePNR" message="tns:IConnectPoint_Reservation_RetrievePNR_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/RetrievePNRResponse" message="tns:IConnectPoint_Reservation_RetrievePNR_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetReservationBalance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/GetReservationBalance" message="tns:IConnectPoint_Reservation_GetReservationBalance_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/GetReservationBalanceResponse" message="tns:IConnectPoint_Reservation_GetReservationBalance_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ImportPNR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/ImportPNR" message="tns:IConnectPoint_Reservation_ImportPNR_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/ImportPNRResponse" message="tns:IConnectPoint_Reservation_ImportPNR_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="HistoryPNR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/HistoryPNR" message="tns:IConnectPoint_Reservation_HistoryPNR_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/HistoryPNRResponse" message="tns:IConnectPoint_Reservation_HistoryPNR_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="EvaluateModificationOfPNR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/EvaluateModificationOfPNR" message="tns:IConnectPoint_Reservation_EvaluateModificationOfPNR_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/EvaluateModificationOfPNRResponse" message="tns:IConnectPoint_Reservation_EvaluateModificationOfPNR_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="SummaryPNRExt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/SummaryPNRExt" message="tns:IConnectPoint_Reservation_SummaryPNRExt_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/SummaryPNRExtResponse" message="tns:IConnectPoint_Reservation_SummaryPNRExt_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AddPenalties">
+      <wsdl:documentation>&lt;summary>
+ adds penalties based on supplied data.
+ &lt;/summary>
+ &lt;param name="AddPenaltyRequest">header / detail info for penalties to add.&lt;/param></wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/AddPenalties" message="tns:IConnectPoint_Reservation_AddPenalties_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/AddPenaltiesResponse" message="tns:IConnectPoint_Reservation_AddPenalties_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePNRExt">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/CreatePNRExt" message="tns:IConnectPoint_Reservation_CreatePNRExt_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/CreatePNRExtResponse" message="tns:IConnectPoint_Reservation_CreatePNRExt_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="AddTaxes">
+      <wsdl:documentation>&lt;summary>
+ adds taxes based on the given payload
+ &lt;/summary>
+ &lt;param name="AddTaxRequest">header and detail data for the taxes to add.&lt;/param></wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/AddTaxes" message="tns:IConnectPoint_Reservation_AddTaxes_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/AddTaxesResponse" message="tns:IConnectPoint_Reservation_AddTaxes_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="OverrideReservationCharges">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/OverrideReservationCharges" message="tns:IConnectPoint_Reservation_OverrideReservationCharges_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/OverrideReservationChargesResponse" message="tns:IConnectPoint_Reservation_OverrideReservationCharges_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="OverBook">
+      <wsdl:documentation><![CDATA[<summary>
+ Create Group PNR
+ <Date>10-Aug-2016</Date>
+ </summary>
+ <param name="CreatePnrRequest">{{Global.Radixx.ConnectPoint.Reservation.Request.CreatePNR}}</param>
+ <returns>{{Global.Radixx.ConnectPoint.Reservation.Response.ViewPNR}}</returns>]]></wsdl:documentation>
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/OverBook" message="tns:IConnectPoint_Reservation_OverBook_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/OverBookResponse" message="tns:IConnectPoint_Reservation_OverBook_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetApisInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/GetApisInfo" message="tns:IConnectPoint_Reservation_GetApisInfo_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/GetApisInfoResponse" message="tns:IConnectPoint_Reservation_GetApisInfo_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="SetApisInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/SetApisInfo" message="tns:IConnectPoint_Reservation_SetApisInfo_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/SetApisInfoResponse" message="tns:IConnectPoint_Reservation_SetApisInfo_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyPNRFFP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/ModifyPNRFFP" message="tns:IConnectPoint_Reservation_ModifyPNRFFP_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/ModifyPNRFFPResponse" message="tns:IConnectPoint_Reservation_ModifyPNRFFP_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPNRFFP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/CancelPNRFFP" message="tns:IConnectPoint_Reservation_CancelPNRFFP_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/CancelPNRFFPResponse" message="tns:IConnectPoint_Reservation_CancelPNRFFP_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetReservation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/GetReservation" message="tns:IConnectPoint_Reservation_GetReservation_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/GetReservationResponse" message="tns:IConnectPoint_Reservation_GetReservation_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="HoldInventory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/HoldInventory" message="tns:IConnectPoint_Reservation_HoldInventory_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/HoldInventoryResponse" message="tns:IConnectPoint_Reservation_HoldInventory_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="ReleaseInventory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/ReleaseInventory" message="tns:IConnectPoint_Reservation_ReleaseInventory_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/ReleaseInventoryResponse" message="tns:IConnectPoint_Reservation_ReleaseInventory_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPNRFFPAllTaxes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/CancelPNRFFPAllTaxes" message="tns:IConnectPoint_Reservation_CancelPNRFFPAllTaxes_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/CancelPNRFFPAllTaxesResponse" message="tns:IConnectPoint_Reservation_CancelPNRFFPAllTaxes_OutputMessage"/>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPNRFFPAutoCancel">
+      <wsdl:input wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/CancelPNRFFPAutoCancel" message="tns:IConnectPoint_Reservation_CancelPNRFFPAutoCancel_InputMessage"/>
+      <wsdl:output wsaw:Action="http://tempuri.org/IConnectPoint_Reservation/CancelPNRFFPAutoCancelResponse" message="tns:IConnectPoint_Reservation_CancelPNRFFPAutoCancel_OutputMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IConnectPoint_Reservation" type="tns:IConnectPoint_Reservation">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CreatePNR">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/CreatePNR" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePNRFFP">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/CreatePNRFFP" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SummaryPNR">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/SummaryPNR" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyPNR">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/ModifyPNR" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPNR">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/CancelPNR" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrievePNR">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/RetrievePNR" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReservationBalance">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/GetReservationBalance" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ImportPNR">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/ImportPNR" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HistoryPNR">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/HistoryPNR" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EvaluateModificationOfPNR">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/EvaluateModificationOfPNR" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SummaryPNRExt">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/SummaryPNRExt" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPenalties">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/AddPenalties" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePNRExt">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/CreatePNRExt" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTaxes">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/AddTaxes" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OverrideReservationCharges">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/OverrideReservationCharges" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OverBook">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/OverBook" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApisInfo">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/GetApisInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetApisInfo">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/SetApisInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyPNRFFP">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/ModifyPNRFFP" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPNRFFP">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/CancelPNRFFP" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReservation">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/GetReservation" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HoldInventory">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/HoldInventory" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReleaseInventory">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/ReleaseInventory" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPNRFFPAllTaxes">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/CancelPNRFFPAllTaxes" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPNRFFPAutoCancel">
+      <soap:operation soapAction="http://tempuri.org/IConnectPoint_Reservation/CancelPNRFFPAutoCancel" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ConnectPoint_Reservation">
+    <wsdl:port name="BasicHttpBinding_IConnectPoint_Reservation" binding="tns:BasicHttpBinding_IConnectPoint_Reservation">
+      <soap:address location="http://external.connectpoint.flydubai.com/v3/ConnectPoint.Reservation.svc"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,10 @@
+{
+  "httpBasicAuthUsername" : "",
+  "httpBasicAuthPassword" : "",
+  "endpointAddress" : "http://external.connectpoint.flydubai.com/v3/ConnectPoint.Reservation.svc",
+  "connectionTimeout" : 10000,
+  "requestTimeout" : 10000,
+  "soapActionURI" : null,
+  "packageName" : "com.sample1.services.connectpoint_reservation",
+  "httpHeaders" : { }
+}

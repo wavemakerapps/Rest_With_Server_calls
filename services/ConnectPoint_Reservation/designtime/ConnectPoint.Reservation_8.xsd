@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/FZ.BusinessLayer.Reservation.Requests" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/FZ.BusinessLayer.Reservation.Requests">
+  <xs:import schemaLocation="ConnectPoint.Reservation_4.xsd" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:complexType name="SeatInventoryRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="seatInventory" nillable="true" type="tns:ArrayOfSeatInventoryEntity"/>
+      <xs:element minOccurs="0" name="TransactionInfo" nillable="true" type="q1:TransactionInfo" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeatInventoryRequest" nillable="true" type="tns:SeatInventoryRequest"/>
+  <xs:complexType name="ArrayOfSeatInventoryEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeatInventoryEntity" nillable="true" type="tns:SeatInventoryEntity"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeatInventoryEntity" nillable="true" type="tns:ArrayOfSeatInventoryEntity"/>
+  <xs:complexType name="SeatInventoryEntity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dayHold" type="xs:int"/>
+      <xs:element minOccurs="0" name="departureDate" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="fareClass" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="heldId" type="xs:int"/>
+      <xs:element minOccurs="0" name="incBooked" type="xs:int"/>
+      <xs:element minOccurs="0" name="incHeld" type="xs:int"/>
+      <xs:element minOccurs="0" name="infBooked" type="xs:int"/>
+      <xs:element minOccurs="0" name="infHeld" type="xs:int"/>
+      <xs:element minOccurs="0" name="logicalFlt" type="xs:int"/>
+      <xs:element minOccurs="0" name="resChannelId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeatInventoryEntity" nillable="true" type="tns:SeatInventoryEntity"/>
+</xs:schema>

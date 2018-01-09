@@ -1,0 +1,2403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Reservation.Response">
+  <xs:import schemaLocation="ConnectPoint.Reservation_4.xsd" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+  <xs:import schemaLocation="ConnectPoint.Reservation_7.xsd" namespace="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+  <xs:complexType name="ViewPNR">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SeriesNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BookingAgent" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CRSCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TravelGroupID" type="xs:int"/>
+      <xs:element minOccurs="0" name="IATANumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExternalAppID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="WebBookingID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PromotionalID" type="xs:int"/>
+      <xs:element minOccurs="0" name="PromotionalCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecieptLanguageID" type="xs:int"/>
+      <xs:element minOccurs="0" name="ReservationCurrency" type="q1:Enumerations.CurrencyCodeTypes" xmlns:q1="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request"/>
+      <xs:element minOccurs="0" name="ProfileID" type="xs:long"/>
+      <xs:element minOccurs="0" name="PNRPin" type="xs:long"/>
+      <xs:element minOccurs="0" name="BookDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ReservationType" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TodaysDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="LastModified" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ReservationExpirationDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CorporationID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SecurityGuid" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="HasTickets" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="ValuePackageData" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="UserIPAddress" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ManageBookingAgent" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="HistoricConfirmationNum" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Cabin" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReservationBalance" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ChangeFee" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="LogicalFlightCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="ActivePassengerCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="BalancedReservation" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="ReservationFulfillmentRequiredByGMT" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ReservationFulfillmentRequiredByODT" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsInterline" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="IsCodeShare" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Airlines" nillable="true" type="tns:ArrayOfAirline"/>
+      <xs:element minOccurs="0" name="Payments" nillable="true" type="tns:ArrayOfPayment"/>
+      <xs:element minOccurs="0" name="FlightGroups" nillable="true" type="tns:ArrayOfFlightGroup"/>
+      <xs:element minOccurs="0" name="FareGroups" nillable="true" type="tns:ArrayOfFareGroup"/>
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="tns:ArrayOfComment"/>
+      <xs:element minOccurs="0" name="ReservationContacts" nillable="true" type="tns:ArrayOfReservationContact"/>
+      <xs:element minOccurs="0" name="ContactInfos" nillable="true" type="tns:ArrayOfContactInfo"/>
+      <xs:element minOccurs="0" name="DocumentInfos" nillable="true" type="tns:ArrayOfDocumentInfo"/>
+      <xs:element minOccurs="0" name="Vouchers" nillable="true" type="tns:ArrayOfVoucher"/>
+      <xs:element minOccurs="0" name="Cars" nillable="true" type="tns:ArrayOfCar"/>
+      <xs:element minOccurs="0" name="Hotels" nillable="true" type="tns:ArrayOfHotel"/>
+      <xs:element minOccurs="0" name="Packages" nillable="true" type="tns:ArrayOfPackage"/>
+      <xs:element name="Exceptions" nillable="true" type="q2:ExceptionInformation.Exceptions" xmlns:q2="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewPNR" nillable="true" type="tns:ViewPNR"/>
+  <xs:complexType name="ArrayOfAirline">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Airline" nillable="true" type="tns:Airline"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAirline" nillable="true" type="tns:ArrayOfAirline"/>
+  <xs:complexType name="Airline">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element name="LogicalFlight" nillable="true" type="tns:ArrayOfLogicalFlight"/>
+      <xs:element name="OAFlights" nillable="true" type="tns:ArrayOfOAFlight"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Airline" nillable="true" type="tns:Airline"/>
+  <xs:complexType name="ArrayOfLogicalFlight">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LogicalFlight" nillable="true" type="tns:LogicalFlight"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLogicalFlight" nillable="true" type="tns:ArrayOfLogicalFlight"/>
+  <xs:complexType name="LogicalFlight">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FlightGroupId" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecordNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="LogicalFlightID" type="xs:int"/>
+      <xs:element minOccurs="0" name="DepartureDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginDefaultTerminal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DestinationName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DestinationDefaultTerminal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginMetroGroup" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DestinationMetroGroup" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FlightNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SellingCarrier" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OperatingCarrier" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OperatingFlightNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DepartureTime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Arrivaltime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="PackageItemID" type="xs:int"/>
+      <xs:element minOccurs="0" name="PackageItemName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PackageItemDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PackageItemBookDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="PackageItemStartDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="PackageItemEndDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="VendorId" type="xs:int"/>
+      <xs:element minOccurs="0" name="VendorName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="VendorDescription" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="UIDisplayValue" type="xs:int"/>
+      <xs:element minOccurs="0" name="PhysicalFlights" nillable="true" type="tns:ArrayOfPhysicalFlight"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LogicalFlight" nillable="true" type="tns:LogicalFlight"/>
+  <xs:complexType name="ArrayOfPhysicalFlight">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PhysicalFlight" nillable="true" type="tns:PhysicalFlight"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPhysicalFlight" nillable="true" type="tns:ArrayOfPhysicalFlight"/>
+  <xs:complexType name="PhysicalFlight">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecordNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="DestinationDefaultTerminal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PhysicalFlightID" type="xs:int"/>
+      <xs:element minOccurs="0" name="LogicalFlightID" type="xs:int"/>
+      <xs:element minOccurs="0" name="CarrierCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CarrierName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FlightNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FlightOrder" type="xs:int"/>
+      <xs:element minOccurs="0" name="DepartureDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginDefaultTerminal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DestinationName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginMetroGroup" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DestinationMetroGroup" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="SellingCarrier" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OperatingCarrier" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OperatingFlightNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DepartureTime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Arrivaltime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FlightDuration" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Trip" type="xs:int"/>
+      <xs:element minOccurs="0" name="Gate" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TotalWeight" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="UIDisplayValue" type="xs:int"/>
+      <xs:element minOccurs="0" name="Active" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="FlightStatus" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Customers" nillable="true" type="tns:ArrayOfCustomer"/>
+      <xs:element minOccurs="0" name="FromTerminal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ToTerminal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AirCraftType" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AirCraftDescription" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PhysicalFlight" nillable="true" type="tns:PhysicalFlight"/>
+  <xs:complexType name="ArrayOfCustomer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Customer" nillable="true" type="tns:Customer"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCustomer" nillable="true" type="tns:ArrayOfCustomer"/>
+  <xs:complexType name="Customer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AirlinePersons" nillable="true" type="tns:ArrayOfAirlinePerson"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Customer" nillable="true" type="tns:Customer"/>
+  <xs:complexType name="ArrayOfAirlinePerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AirlinePerson" nillable="true" type="tns:AirlinePerson"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAirlinePerson" nillable="true" type="tns:ArrayOfAirlinePerson"/>
+  <xs:complexType name="AirlinePerson">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Person">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Weight" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="FFNum" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PaxActive" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="RecordNumber" type="xs:int"/>
+          <xs:element minOccurs="0" name="RecordLocator" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="OriginalRecordNumber" type="xs:int"/>
+          <xs:element minOccurs="0" name="ContactInfo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="DropoffID" type="xs:int"/>
+          <xs:element minOccurs="0" name="PickupID" type="xs:int"/>
+          <xs:element minOccurs="0" name="LapChildID" type="xs:int"/>
+          <xs:element minOccurs="0" name="FareClassCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FareBasisCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="WebFareType" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FareBasisSched" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FareAmount" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="ResSegStatus" type="xs:int"/>
+          <xs:element minOccurs="0" name="SegSubStatus" type="xs:int"/>
+          <xs:element minOccurs="0" name="SelecteeStatus" type="xs:int"/>
+          <xs:element minOccurs="0" name="CheckinStatus" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="Cabin" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TicketNumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="HasTickets" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="UIDisplayValue" type="xs:int"/>
+          <xs:element minOccurs="0" name="InterlinedSegment" type="xs:int"/>
+          <xs:element minOccurs="0" name="InterlinedCarrierCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ManualFare" type="xs:int"/>
+          <xs:element minOccurs="0" name="InventoryOverbooked" type="xs:int"/>
+          <xs:element minOccurs="0" name="TicketCouponNumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NVB" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="NVA" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TicketControl" type="xs:int"/>
+          <xs:element minOccurs="0" name="TicketControlOwner" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TicketControlModifiedDate" type="xs:dateTime">
+            <xs:annotation>
+              <xs:appinfo>
+                <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="MarketingCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="MarketingOptIn" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="EmergencyContactID" type="xs:int"/>
+          <xs:element minOccurs="0" name="DisclosedEmergencyContact" type="xs:int"/>
+          <xs:element minOccurs="0" name="CappsStatus" type="xs:int"/>
+          <xs:element minOccurs="0" name="ToRecordNumber" type="xs:int"/>
+          <xs:element minOccurs="0" name="FromRecordNumber" type="xs:int"/>
+          <xs:element minOccurs="0" name="ChangeConsent" type="xs:int"/>
+          <xs:element minOccurs="0" name="StoreFrontID" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="InsuranceConfNum" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="InsuranceTransID" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="RedressNum" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="KnownTravNum" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PrimaryPassenger" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="NameChangeCount" type="xs:int"/>
+          <xs:element minOccurs="0" name="CrsCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FareCalcString" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Endorsement" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="FareTypeID" type="xs:int"/>
+          <xs:element minOccurs="0" name="FareCarrier" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="TicketDesignator" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="SeatAssignments" nillable="true" type="tns:ArrayOfSeatAssignment"/>
+          <xs:element minOccurs="0" name="SecondaryCRSCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="Charges" nillable="true" type="tns:ArrayOfCharge"/>
+          <xs:element minOccurs="0" name="Bags" nillable="true" type="tns:ArrayOfBaggage"/>
+          <xs:element minOccurs="0" name="TierID" type="xs:int"/>
+          <xs:element minOccurs="0" name="TierName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="LastGDSStatus" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="OperatingRBD" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="SecondaryRecordLocator" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PosOfficeOrCityCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PosUserIdentificationNumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PosAirportCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PosCrsCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PosUserType" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PosIsoCountryCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PosIsoCurrency" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PosDutyCode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PosErspIdNumber" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="PosPointOfFirstDeparture" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="POSOffice" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AirlinePerson" nillable="true" type="tns:AirlinePerson"/>
+  <xs:complexType name="Person">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element name="PersonOrgID" type="xs:int"/>
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="MiddleName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Age" type="xs:int"/>
+      <xs:element minOccurs="0" name="DOB" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Gender" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NationalityLaguageID" type="xs:int"/>
+      <xs:element minOccurs="0" name="RelationType" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="WBCID" type="xs:int"/>
+      <xs:element minOccurs="0" name="PTCID" type="xs:int"/>
+      <xs:element minOccurs="0" name="UseInventory" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Postal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Company" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Passport" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Nationality" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PassportIssueCountry" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PassportExpiryDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ProfileId" type="xs:long"/>
+      <xs:element minOccurs="0" name="NameLineID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NameElementID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NamePositionID" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Person" nillable="true" type="tns:Person"/>
+  <xs:complexType name="ArrayOfSeatAssignment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SeatAssignment" nillable="true" type="tns:SeatAssignment"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSeatAssignment" nillable="true" type="tns:ArrayOfSeatAssignment"/>
+  <xs:complexType name="SeatAssignment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PhysicalFlightID" type="xs:int"/>
+      <xs:element minOccurs="0" name="ActualDepartureDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="FlightNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ScheduledDeparturetime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ScheduledArrivaltime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BoardingPassNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="Seat" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RowNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="Gate" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OldSeat" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OldRowNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="Boarded" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="CheckInAgent" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CheckInDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CouponStatusIndicator" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BoardingSequence" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="LastModifiedDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BoardingPassPrinted" type="xs:int"/>
+      <xs:element minOccurs="0" name="FrequentFlyerCarrierCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FrequentFlyerNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FrequentFlyerSSRCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FrequentFlyerMemberTierLevel" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FrequentFlyerMemberRating" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FrequentFlyerNumberActionTracker" type="xs:int"/>
+      <xs:element minOccurs="0" name="ReservationChannelID" type="xs:int"/>
+      <xs:element minOccurs="0" name="FrequentFlyerInfoReservationChannelID" type="xs:int"/>
+      <xs:element minOccurs="0" name="FrequentFlyerNumberLAstModifiedDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SeatAssignment" nillable="true" type="tns:SeatAssignment"/>
+  <xs:complexType name="ArrayOfCharge">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Charge" nillable="true" type="tns:Charge"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCharge" nillable="true" type="tns:ArrayOfCharge"/>
+  <xs:complexType name="Charge">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginalChargeID" type="xs:int"/>
+      <xs:element minOccurs="0" name="CodeType" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RefundType" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginalCurrency" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecordNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="VoucherNumber" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BillDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TaxID" type="xs:int"/>
+      <xs:element minOccurs="0" name="ChargeComment" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ChargeStatus" type="xs:int"/>
+      <xs:element minOccurs="0" name="IsRefundable" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ExchangeRateDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OriginalAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="StatusReasonID" type="xs:int"/>
+      <xs:element minOccurs="0" name="IsSSR" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="PaymentNumber" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TaxChargeID" type="xs:int"/>
+      <xs:element minOccurs="0" name="Commission" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ResChannelId" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Bundled" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TaxIsRefundable" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TaxIsCommissionable" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ServiceIsRefundable" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ServiceIsCommissionable" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ReservationPaymentMaps" nillable="true" type="tns:ArrayOfReservationPaymentMap">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="PenaltyChargeID" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="PenaltyTypeID" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BoardingPassSsrOrder" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="PhysicalFlightID" nillable="true" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ExtPenaltyRule" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Discount" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TaxCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BasePoints" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TierPoints" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BonusPoints" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BonusTierPoints" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="MilesActive" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SSRStatus" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Charge" nillable="true" type="tns:Charge"/>
+  <xs:complexType name="ArrayOfReservationPaymentMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReservationPaymentMap" nillable="true" type="tns:ReservationPaymentMap"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReservationPaymentMap" nillable="true" type="tns:ArrayOfReservationPaymentMap"/>
+  <xs:complexType name="ReservationPaymentMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReservationPaymentID" type="xs:int"/>
+      <xs:element minOccurs="0" name="AmountApplied" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ReservationChargeID" type="xs:int"/>
+      <xs:element minOccurs="0" name="DatePaid" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OriginalReferencePaymentID" type="xs:int"/>
+      <xs:element minOccurs="0" name="RefundAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="PaymentCurrencyAmount" type="xs:int"/>
+      <xs:element minOccurs="0" name="ApprovalCode" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReservationPaymentMap" nillable="true" type="tns:ReservationPaymentMap"/>
+  <xs:complexType name="ArrayOfBaggage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Baggage" nillable="true" type="tns:Baggage"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfBaggage" nillable="true" type="tns:ArrayOfBaggage"/>
+  <xs:complexType name="Baggage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BagId" type="xs:int"/>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BagNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="BagWeight" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="BagCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BagChecked" type="xs:int"/>
+      <xs:element minOccurs="0" name="Pet" type="xs:int"/>
+      <xs:element minOccurs="0" name="BagActive" type="xs:int"/>
+      <xs:element minOccurs="0" name="BagTagPrinted" type="xs:int"/>
+      <xs:element minOccurs="0" name="RecordNumber" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Baggage" nillable="true" type="tns:Baggage"/>
+  <xs:complexType name="ArrayOfOAFlight">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OAFlight" nillable="true" type="tns:OAFlight"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOAFlight" nillable="true" type="tns:ArrayOfOAFlight"/>
+  <xs:complexType name="OAFlight">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OALogicalFlightID" type="xs:int"/>
+      <xs:element minOccurs="0" name="DepartureDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Origin" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Destination" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OperatingCarrier" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OperatingFlightNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DepartureTime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Arrivaltime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="OAFlightPersons" nillable="true" type="tns:ArrayOfOAFlightPerson"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OAFlight" nillable="true" type="tns:OAFlight"/>
+  <xs:complexType name="ArrayOfOAFlightPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OAFlightPerson" nillable="true" type="tns:OAFlightPerson"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOAFlightPerson" nillable="true" type="tns:ArrayOfOAFlightPerson"/>
+  <xs:complexType name="OAFlightPerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecordNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="PersonOrgID" type="xs:int"/>
+      <xs:element minOccurs="0" name="ResSegStatus" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OAFlightPerson" nillable="true" type="tns:OAFlightPerson"/>
+  <xs:complexType name="ArrayOfPayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Payment" nillable="true" type="tns:Payment"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPayment" nillable="true" type="tns:ArrayOfPayment"/>
+  <xs:complexType name="Payment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReservationPaymentID" type="xs:int"/>
+      <xs:element minOccurs="0" name="CardHolder" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PaymentAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ExpirationDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="CardNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CVCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Authorizationcode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TerminalID" type="xs:int"/>
+      <xs:element minOccurs="0" name="CurrencyPaid" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CheckNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="Reference" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Result" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TransactionID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ValueCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TransactionIndicator" type="xs:int"/>
+      <xs:element minOccurs="0" name="SettlementBatch" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AuthorizedAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="VoucherNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="FFNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Miles" type="xs:int"/>
+      <xs:element minOccurs="0" name="PaymentComment" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BaseCurrency" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BaseAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="ExchangeRateDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="DocumentReceivedBy" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="BatchProcessStart" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BatchProcessExtracted" type="xs:int"/>
+      <xs:element minOccurs="0" name="TicketCouponNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ATCANDateProcessed" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TicketType" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="GcxID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="GcxOptOption" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="GcxExported" type="xs:int"/>
+      <xs:element minOccurs="0" name="GcxExportedDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OriginalCurrency" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginalAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="IATANum" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ProcessorID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="MerchantID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ProcessorName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginalPaymentMethod" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TransactionStatus" type="xs:int"/>
+      <xs:element minOccurs="0" name="ResponseMessage" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ResponseCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PersonOrgID" type="xs:int"/>
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CompanyName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Address2" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Postal" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PaymentMethod" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DatePaid" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="UserData" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CardVerification" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="GrossAmtResCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="GrossAmtPayCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="NetAmtResCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="CommissionDeductedResCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="CommissionDeductedPayCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="RptNetFrmResCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="RptCommissionFromResCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="RptCommissionFromPayCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="TotalRefundResCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="TotalRefundRptCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="TotalRefundPayCurrency" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="RedeemedVoucherAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OriginalPaymentID" type="xs:int"/>
+      <xs:element minOccurs="0" name="PaymentReservationChannelID" type="xs:int"/>
+      <xs:element minOccurs="0" name="AncillaryData01" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AncillaryData02" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AncillaryData03" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AncillaryData04" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AncillaryData05" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AuthenticationByPassed" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Payment" nillable="true" type="tns:Payment"/>
+  <xs:complexType name="ArrayOfFlightGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlightGroup" nillable="true" type="tns:FlightGroup"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlightGroup" nillable="true" type="tns:ArrayOfFlightGroup"/>
+  <xs:complexType name="FlightGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FareGroupID" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlightGroup" nillable="true" type="tns:FlightGroup"/>
+  <xs:complexType name="ArrayOfFareGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FareGroup" nillable="true" type="tns:FareGroup"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFareGroup" nillable="true" type="tns:ArrayOfFareGroup"/>
+  <xs:complexType name="FareGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" type="xs:int"/>
+      <xs:element minOccurs="0" name="Charges" nillable="true" type="tns:ArrayOfCharge"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FareGroup" nillable="true" type="tns:FareGroup"/>
+  <xs:complexType name="ArrayOfComment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Comment" nillable="true" type="tns:Comment"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfComment" nillable="true" type="tns:ArrayOfComment"/>
+  <xs:complexType name="Comment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CommentID" type="xs:int"/>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CommentDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Comment" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CommentLength" type="xs:int"/>
+      <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Comment" nillable="true" type="tns:Comment"/>
+  <xs:complexType name="ArrayOfReservationContact">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReservationContact" nillable="true" type="tns:ReservationContact"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReservationContact" nillable="true" type="tns:ArrayOfReservationContact"/>
+  <xs:complexType name="ReservationContact">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Person">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="VendorID" type="xs:int"/>
+          <xs:element minOccurs="0" name="MarketingOptIn" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="RedressNum" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="KnownTravNum" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="ContactInfos" nillable="true" type="tns:ArrayOfContactInfo"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReservationContact" nillable="true" type="tns:ReservationContact"/>
+  <xs:complexType name="ArrayOfContactInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ContactInfo" nillable="true" type="tns:ContactInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfContactInfo" nillable="true" type="tns:ArrayOfContactInfo"/>
+  <xs:complexType name="ContactInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ContactID" type="xs:int"/>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PersonOrgID" type="xs:int"/>
+      <xs:element minOccurs="0" name="ContactField" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ContactType" type="xs:int"/>
+      <xs:element minOccurs="0" name="Extension" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CountryCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="AreaCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Display" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PreferredContactMethod" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="ValidatedContact" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ContactInfo" nillable="true" type="tns:ContactInfo"/>
+  <xs:complexType name="ArrayOfDocumentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DocumentInfo" nillable="true" type="tns:DocumentInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDocumentInfo" nillable="true" type="tns:ArrayOfDocumentInfo"/>
+  <xs:complexType name="DocumentInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PersonOrgID" type="xs:int"/>
+      <xs:element minOccurs="0" name="PhysicalFlightID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="OAFlightID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DepartureDate" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DocType" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="DocNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ExpiryDate" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="IssuingCountry" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DocumentInfo" nillable="true" type="tns:DocumentInfo"/>
+  <xs:complexType name="ArrayOfVoucher">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Voucher" nillable="true" type="tns:Voucher"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVoucher" nillable="true" type="tns:ArrayOfVoucher"/>
+  <xs:complexType name="Voucher">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="VoucherNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReasonCode" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="PersonOrgID" type="xs:int"/>
+      <xs:element minOccurs="0" name="SeriesNum" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="RecordNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="ChargeNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="Sponsor" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="EffectiveDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ExpirationDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="OriginalAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="BalanceAmount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="UserId" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="NonTransferable" type="xs:int"/>
+      <xs:element minOccurs="0" name="BatchProcessStart" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="BatchProcessExtracted" type="xs:int"/>
+      <xs:element minOccurs="0" name="VoucherType" type="xs:int"/>
+      <xs:element minOccurs="0" name="TripType" type="xs:int"/>
+      <xs:element minOccurs="0" name="IncludeTaxes" type="xs:int"/>
+      <xs:element minOccurs="0" name="IncludePenalty" type="xs:int"/>
+      <xs:element minOccurs="0" name="IncludeSSR" type="xs:int"/>
+      <xs:element minOccurs="0" name="IncludeAuto" type="xs:int"/>
+      <xs:element minOccurs="0" name="IncludeHotel" type="xs:int"/>
+      <xs:element minOccurs="0" name="STimeRestrict" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ETimeRestrict" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="SundayRestrict" type="xs:int"/>
+      <xs:element minOccurs="0" name="MondayRestrict" type="xs:int"/>
+      <xs:element minOccurs="0" name="TuesdayRestrict" type="xs:int"/>
+      <xs:element minOccurs="0" name="WednesdayRestrict" type="xs:int"/>
+      <xs:element minOccurs="0" name="ThursdayRestrict" type="xs:int"/>
+      <xs:element minOccurs="0" name="FridayRestrict" type="xs:int"/>
+      <xs:element minOccurs="0" name="SaturdayRestrict" type="xs:int"/>
+      <xs:element minOccurs="0" name="VoucherNumFull" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="VoucherPW" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="TravelEffectiveDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TravelExpirationDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/"/>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="LogicalFlightsKey" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Voucher" nillable="true" type="tns:Voucher"/>
+  <xs:complexType name="ArrayOfCar">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car" nillable="true" type="tns:Car"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar" nillable="true" type="tns:ArrayOfCar"/>
+  <xs:complexType name="Car">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Classification" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="CompanyID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReservationNumber" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Car" nillable="true" type="tns:Car"/>
+  <xs:complexType name="ArrayOfHotel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Hotel" nillable="true" type="tns:Hotel"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfHotel" nillable="true" type="tns:ArrayOfHotel"/>
+  <xs:complexType name="Hotel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReservationNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Hotel" nillable="true" type="tns:Hotel"/>
+  <xs:complexType name="ArrayOfPackage">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Package" nillable="true" type="tns:Package"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPackage" nillable="true" type="tns:ArrayOfPackage"/>
+  <xs:complexType name="Package">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompanyID" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ConfirmationNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="ReservationNumber" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Package" nillable="true" type="tns:Package"/>
+  <xs:complexType name="RetrieveBalanceResponse">
+    <xs:sequence>
+      <xs:element name="Balance" nillable="true" type="xs:decimal"/>
+      <xs:element name="Exceptions" nillable="true" type="q3:ExceptionInformation.Exception" xmlns:q3="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetrieveBalanceResponse" nillable="true" type="tns:RetrieveBalanceResponse"/>
+  <xs:complexType name="ViewImportPNR">
+    <xs:sequence>
+      <xs:element name="ImportedPNR" nillable="true" type="tns:ViewImportPNR.Reservation">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: .</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Exceptions" nillable="true" type="q4:ExceptionInformation.Exceptions" xmlns:q4="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: .</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewImportPNR" nillable="true" type="tns:ViewImportPNR"/>
+  <xs:complexType name="ViewImportPNR.Reservation">
+    <xs:sequence>
+      <xs:element name="SeriesNumber" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The series number associated with the confirmation number current default should be 299.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 3.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ConfirmationNumber" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The confirmation number issued during initial booking.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 30.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="BookingAction" type="q5:Enumerations.ImportBookingAction" xmlns:q5="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: This is meant for possible future usage. the current default value 1 (SystemDetermined).</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="BookingCarrier" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The carrier code that the action will be performed for.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 3.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IATANumber" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The IataNumber that the action will be performed for.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 20.</xs:documentation>
+          <xs:documentation>Format: AlphaNumericCodeMixedDotDash.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExternalAppID" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: This value is usually the same as the the IataNumber that the action will be performed for. If the IATA in the Radixx system is not standard then this value will be the True IATA Standard IATA.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 20.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExternalBookingReference" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The value submitted here needs to be the linkage of the information being imported into the Radixx system and the external system. It should be unique per new booking and if Modification action is being performed it needs to match the original submitted externalbooking reference in order for the modification to work.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 20.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="OriginalBookingDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The date the booking was created in the external system.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ReservationCurrency" type="q6:Enumerations.CurrencyCodeTypes" xmlns:q6="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The currency that the booking is being submitted in.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="User" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The Radixx user id that the action will be performed for.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 15.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PromoCode" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: If a promotion code was used submit the value here.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 20.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RecieptLanguageCode" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: This value is the ISO Standard language code that thte receipt and other emailed data will be displayed/submitted in..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 6.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ReservationChannel" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: If the Radixx reservation Channel is known then the value should be submitted here otherwise the default should be 5(TPAPI).</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Value must be in the range 1 and 2147483647.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Segments" nillable="true" type="tns:ArrayOfViewImportPNR.Reservation.Segment">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The collection of Segments.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Value must be in the range 1 and 99.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Persons" nillable="true" type="tns:ArrayOfViewImportPNR.Reservation.Person">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The collection of Persons.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Value must be in the range 1 and 99.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Comments" nillable="true" type="tns:ArrayOfViewImportPNR.Reservation.Comment">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The collection of Comments.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Value must be in the range 0 and 99.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Errors" nillable="true" type="tns:ArrayOfViewImportPNR.Reservation.ImportError">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The collection of Error.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Value must be in the range 0 and 99.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewImportPNR.Reservation" nillable="true" type="tns:ViewImportPNR.Reservation"/>
+  <xs:complexType name="ArrayOfViewImportPNR.Reservation.Segment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewImportPNR.Reservation.Segment" nillable="true" type="tns:ViewImportPNR.Reservation.Segment"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewImportPNR.Reservation.Segment" nillable="true" type="tns:ArrayOfViewImportPNR.Reservation.Segment"/>
+  <xs:complexType name="ViewImportPNR.Reservation.Segment">
+    <xs:sequence>
+      <xs:element name="CarrierCode" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The IATA carrier code operating this physical flight.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 3.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FlightNumber" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The number for this flight.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 20.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DepartureDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The day the flight takes leave..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Origin" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The origin airport code the final landing place..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 3.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="OriginName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The origin airport name the final landing place..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 30.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Destination" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The destination airport code the final landing place..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 3.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DestinationName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The destination airport name the final landing place..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 30.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DepartureTime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The specified time the logical flight departs in the time zone of the point of departure.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ArrivalTime" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The time that the logical flight arrives at its destination in the time zone of the destination.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AirlinePersons" nillable="true" type="tns:ArrayOfViewImportPNR.Reservation.Segment.AirlinePerson">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The collection of AirlinePersons.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Value must be in the range 1 and 99.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewImportPNR.Reservation.Segment" nillable="true" type="tns:ViewImportPNR.Reservation.Segment"/>
+  <xs:complexType name="ArrayOfViewImportPNR.Reservation.Segment.AirlinePerson">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewImportPNR.Reservation.Segment.AirlinePerson" nillable="true" type="tns:ViewImportPNR.Reservation.Segment.AirlinePerson"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewImportPNR.Reservation.Segment.AirlinePerson" nillable="true" type="tns:ArrayOfViewImportPNR.Reservation.Segment.AirlinePerson"/>
+  <xs:complexType name="ViewImportPNR.Reservation.Segment.AirlinePerson">
+    <xs:sequence>
+      <xs:element name="PersonOrgID" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The automatically system generated unique identifier for the passenger. Unless Performing a passenger Name Change then it will be the personOrgID rendered from the ViewPNR Response.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Value must be in the range -2147483648 and 2147483647.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TravelsWithPersonOrgID" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: If an infant is traveling with an adult then the infants person org id will be populated in this property.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Value must be in the range -2147483648 and 2147483647.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FareClass" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The fareclass that the segment was booked under..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 3.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FareBasisCode" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The fareclass that the segment was booked under..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 3.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Charges" nillable="true" type="tns:ArrayOfViewImportPNR.Reservation.Segment.AirlinePerson.Charge">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The collection of Charges.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Value must be in the range 0 and 99.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Seats" nillable="true" type="tns:ArrayOfViewImportPNR.Reservation.Segment.AirlinePerson.Seat"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewImportPNR.Reservation.Segment.AirlinePerson" nillable="true" type="tns:ViewImportPNR.Reservation.Segment.AirlinePerson"/>
+  <xs:complexType name="ArrayOfViewImportPNR.Reservation.Segment.AirlinePerson.Charge">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewImportPNR.Reservation.Segment.AirlinePerson.Charge" nillable="true" type="tns:ViewImportPNR.Reservation.Segment.AirlinePerson.Charge"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewImportPNR.Reservation.Segment.AirlinePerson.Charge" nillable="true" type="tns:ArrayOfViewImportPNR.Reservation.Segment.AirlinePerson.Charge"/>
+  <xs:complexType name="ViewImportPNR.Reservation.Segment.AirlinePerson.Charge">
+    <xs:sequence>
+      <xs:element name="CodeType" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The Code Type Represents the category for this charge.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 6.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Amount" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Amount of the SSR.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Currency" type="q7:Enumerations.CurrencyCodeTypes" xmlns:q7="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Currency of the reservation and the SSR charge.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewImportPNR.Reservation.Segment.AirlinePerson.Charge" nillable="true" type="tns:ViewImportPNR.Reservation.Segment.AirlinePerson.Charge"/>
+  <xs:complexType name="ArrayOfViewImportPNR.Reservation.Segment.AirlinePerson.Seat">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewImportPNR.Reservation.Segment.AirlinePerson.Seat" nillable="true" type="tns:ViewImportPNR.Reservation.Segment.AirlinePerson.Seat"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewImportPNR.Reservation.Segment.AirlinePerson.Seat" nillable="true" type="tns:ArrayOfViewImportPNR.Reservation.Segment.AirlinePerson.Seat"/>
+  <xs:complexType name="ViewImportPNR.Reservation.Segment.AirlinePerson.Seat">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PhysicalFlightID" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The database identifier for the physical flight.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Seat" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The seat assigned to this passenger on this physical flight.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="RowNumber" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The row assigned to this passenger on this physical flight.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewImportPNR.Reservation.Segment.AirlinePerson.Seat" nillable="true" type="tns:ViewImportPNR.Reservation.Segment.AirlinePerson.Seat"/>
+  <xs:complexType name="ArrayOfViewImportPNR.Reservation.Person">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewImportPNR.Reservation.Person" nillable="true" type="tns:ViewImportPNR.Reservation.Person"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewImportPNR.Reservation.Person" nillable="true" type="tns:ArrayOfViewImportPNR.Reservation.Person"/>
+  <xs:complexType name="ViewImportPNR.Reservation.Person">
+    <xs:sequence>
+      <xs:element name="PersonOrgID" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The unique identifier for the passenger..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Value must be in the range -2147483648 and 2147483647.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PTCID" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The code representing the Passenger Type Code for the passenger segment..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Value must be in the range -2147483648 and 2147483647.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PTC" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The iata standard code representing the Passenger Type Code for the passenger segment. (industry predefined Codes ADT, INF, CHD).</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Title" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The salutation for the passenger (e.g. Mr., Miss.)..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 20.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LastName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The passenger's last name..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 64.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FirstName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The passenger's first name..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 64.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MiddleName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The passenger's middle name..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 64.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DateOfBirth" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The passenger's date of birth..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Gender" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The code specifying the gender of the passenger..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Phone" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The contact phone number..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 64.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Mobile" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The contact mobile number..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 64.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Email" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The contact email address..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 64.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Address" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The contact email address..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 64.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="City" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The city for the person.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 50.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Postal" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The postal code for the person.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 10.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Province" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The province or state for the person.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 64.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Country" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The Country for the person.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 30.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DocumentID" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The passport information if available.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 30.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DocumentExpDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The passport expiration date information if available.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SecureFlightRedressNumber" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Secure Flight Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 30.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SecureFlightKnownTravellerNumber" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Secure Flight Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 30.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ApisInfo" nillable="true" type="tns:ArrayOfViewImportPNR.Reservation.Person.ApisInformation">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The collection of ApisInfos.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Value must be in the range 0 and 99.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewImportPNR.Reservation.Person" nillable="true" type="tns:ViewImportPNR.Reservation.Person"/>
+  <xs:complexType name="ArrayOfViewImportPNR.Reservation.Person.ApisInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewImportPNR.Reservation.Person.ApisInformation" nillable="true" type="tns:ViewImportPNR.Reservation.Person.ApisInformation"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewImportPNR.Reservation.Person.ApisInformation" nillable="true" type="tns:ArrayOfViewImportPNR.Reservation.Person.ApisInformation"/>
+  <xs:complexType name="ViewImportPNR.Reservation.Person.ApisInformation">
+    <xs:sequence>
+      <xs:element name="ApisInfoIndex" type="xs:int">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Value must be in the range -2147483648 and 2147483647.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SeriesNumber" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ConfirmationNumber" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RecordNumber" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LastName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 64.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FirstName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 64.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MiddleName" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="BirthDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Gender" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 1.</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Citizenship" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ResidenceCountry" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Status" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CrewType" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="HomeAddress" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="HomeCity" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="HomeState" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="HomePostal" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="HomeCountry" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DestinationAddress" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DestinationCity" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DestinationState" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DestinationPostal" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DestinationCountry" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Embarkation" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="BirthCity" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="BirthState" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="BirthCountry" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DocumentType1" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DocumentNumber" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IssueCountry1" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExpirationDate1" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DocumentType2" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DocumentNumber2" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IssueCountry2" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExpirationDate2" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ResultCode" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ResultMessage" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PhysicalFlightID" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ActualDepartureDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FlightNumber" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Debarkation" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Arrival" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DocumentScanned1" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DocumentScanned2" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Apis Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewImportPNR.Reservation.Person.ApisInformation" nillable="true" type="tns:ViewImportPNR.Reservation.Person.ApisInformation"/>
+  <xs:complexType name="ArrayOfViewImportPNR.Reservation.Comment">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewImportPNR.Reservation.Comment" nillable="true" type="tns:ViewImportPNR.Reservation.Comment"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewImportPNR.Reservation.Comment" nillable="true" type="tns:ArrayOfViewImportPNR.Reservation.Comment"/>
+  <xs:complexType name="ViewImportPNR.Reservation.Comment">
+    <xs:sequence>
+      <xs:element name="CommentDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Date the Comment was created.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CommentText" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The Comment entered.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewImportPNR.Reservation.Comment" nillable="true" type="tns:ViewImportPNR.Reservation.Comment"/>
+  <xs:complexType name="ArrayOfViewImportPNR.Reservation.ImportError">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewImportPNR.Reservation.ImportError" nillable="true" type="tns:ViewImportPNR.Reservation.ImportError"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewImportPNR.Reservation.ImportError" nillable="true" type="tns:ArrayOfViewImportPNR.Reservation.ImportError"/>
+  <xs:complexType name="ViewImportPNR.Reservation.ImportError">
+    <xs:sequence>
+      <xs:element name="ErrorCode" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Error Code.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RadixxQueue" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Queue Information.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ErrorText" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Error Description.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Format: AlphaNumeric.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewImportPNR.Reservation.ImportError" nillable="true" type="tns:ViewImportPNR.Reservation.ImportError"/>
+  <xs:complexType name="ViewHistoryPNRCollection">
+    <xs:sequence>
+      <xs:element name="HistoryPNRList" nillable="true" type="tns:ArrayOfViewHistoryPNR"/>
+      <xs:element name="Exceptions" nillable="true" type="q8:ExceptionInformation.Exceptions" xmlns:q8="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The collection of returned exceptions or results.</xs:documentation>
+          <xs:documentation>Constraints: Required.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewHistoryPNRCollection" nillable="true" type="tns:ViewHistoryPNRCollection"/>
+  <xs:complexType name="ArrayOfViewHistoryPNR">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewHistoryPNR" nillable="true" type="tns:ViewHistoryPNR"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewHistoryPNR" nillable="true" type="tns:ArrayOfViewHistoryPNR"/>
+  <xs:complexType name="ViewHistoryPNR">
+    <xs:sequence>
+      <xs:element name="ReservationsToInsertHistory" nillable="true" type="tns:ArrayOfReservationToInsertHistory">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Reservations Needing history insertion.</xs:documentation>
+          <xs:documentation>Constraints: Required.</xs:documentation>
+          <xs:documentation>Range: Value must be in the range 1 and 2147483647.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewHistoryPNR" nillable="true" type="tns:ViewHistoryPNR"/>
+  <xs:complexType name="ArrayOfReservationToInsertHistory">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReservationToInsertHistory" nillable="true" type="tns:ReservationToInsertHistory"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReservationToInsertHistory" nillable="true" type="tns:ArrayOfReservationToInsertHistory"/>
+  <xs:complexType name="ReservationToInsertHistory">
+    <xs:sequence>
+      <xs:element name="Action" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: History Event.</xs:documentation>
+          <xs:documentation>Constraints: Required.</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 2147483647.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UpdatedPNRHistory" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: UpdatedPNRHistory.</xs:documentation>
+          <xs:documentation>Constraints: Required.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="HistoryEventText" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: History Event Text.</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 2147483647.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UpdateDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: This should be the update date in GMT of when the update request was sent.</xs:documentation>
+          <xs:documentation>Constraints: Required.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Passenger" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Passenger.</xs:documentation>
+          <xs:documentation>Constraints: Required.</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 2147483647.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Segment" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Segment.</xs:documentation>
+          <xs:documentation>Constraints: Required.</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 2147483647.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Description" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: Description.</xs:documentation>
+          <xs:documentation>Constraints: Required.</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 2147483647.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="User" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: User.</xs:documentation>
+          <xs:documentation>Constraints: Required.</xs:documentation>
+          <xs:documentation>Range: Length must be in the range 1 and 2147483647.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ResChannel" type="q9:Enumerations.ReservationChannelTypes" xmlns:q9="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Request">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: ResChannel.</xs:documentation>
+          <xs:documentation>Constraints: Required.</xs:documentation>
+          <xs:documentation>Range: Value must be in the range 1 and 2147483647.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IPAddress" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The value supplied in this property represent the Consumers IP address. The connect point integrator will need to capture this information from the browser object.</xs:documentation>
+          <xs:documentation>Constraints: Required.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReservationToInsertHistory" nillable="true" type="tns:ReservationToInsertHistory"/>
+  <xs:complexType name="ViewPNRModificationImpactCollection">
+    <xs:sequence>
+      <xs:element name="PNRModificationImpact" nillable="true" type="tns:ArrayOfViewPNRModificationImpact"/>
+      <xs:element name="Exceptions" nillable="true" type="q10:ExceptionInformation.Exceptions" xmlns:q10="http://schemas.datacontract.org/2004/07/Radixx.ConnectPoint.Exceptions">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The collection of returned exceptions or results.</xs:documentation>
+          <xs:documentation>Constraints: Required.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewPNRModificationImpactCollection" nillable="true" type="tns:ViewPNRModificationImpactCollection"/>
+  <xs:complexType name="ArrayOfViewPNRModificationImpact">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ViewPNRModificationImpact" nillable="true" type="tns:ViewPNRModificationImpact"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfViewPNRModificationImpact" nillable="true" type="tns:ArrayOfViewPNRModificationImpact"/>
+  <xs:complexType name="ViewPNRModificationImpact">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RefundType" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The type of refund applied..</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Amount" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: .</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description:  .</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="RefundAmount" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: .</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="RefundCurrency" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: The  .</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ExchangeRate" type="xs:decimal">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: .</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ChargeKey" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: .</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="ChargeCode" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: .</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="PaymentID" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: .</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="RefundTo" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo/>
+          <xs:documentation>Description: .</xs:documentation>
+          <xs:documentation>Constraints: Optional (Not Required).</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ViewPNRModificationImpact" nillable="true" type="tns:ViewPNRModificationImpact"/>
+</xs:schema>
